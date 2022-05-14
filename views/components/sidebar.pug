@@ -1,0 +1,484 @@
+#sidebar.sidebar
+  .container
+    .col-md-12
+      .tab-content
+        // Start of Contacts
+        #members.tab-pane.fade
+          .search
+            form.form-inline.position-relative
+              input#people.form-control(type='search' placeholder='Search for people...')
+              button.btn.btn-link.loop(type='button')
+                i.material-icons search
+            button.btn.create(data-toggle='modal' data-target='#exampleModalCenter')
+              i.material-icons person_add
+          .list-group.sort
+            button.btn.filterMembersBtn.active.show(data-toggle='list' data-filter='all') All
+            button.btn.filterMembersBtn(data-toggle='list' data-filter='online') Online
+            button.btn.filterMembersBtn(data-toggle='list' data-filter='offline') Offline
+          .contacts
+            h1 Contacts
+            #contacts.list-group(role='tablist')
+              a.filterMembers.all.online.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-1.jpg' data-toggle='tooltip' data-placement='top' title='Janette' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  h5 Janette Dalton
+                  p Sofia, Bulgaria
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.online.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-1.jpg' data-toggle='tooltip' data-placement='top' title='Michael' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  h5 Michael Knudsen
+                  p Washington, USA
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.online.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-2.jpg' data-toggle='tooltip' data-placement='top' title='Lean' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  h5 Lean Avent
+                  p Shanghai, China
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.online.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-2.jpg' data-toggle='tooltip' data-placement='top' title='Mariette' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  h5 Mariette Toles
+                  p Helena, Montana
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.online.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-3.jpg' data-toggle='tooltip' data-placement='top' title='Harmony' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  h5 Harmony Otero
+                  p Indore, India
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.offline.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-5.jpg' data-toggle='tooltip' data-placement='top' title='Keith' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  h5 Keith Morris
+                  p Chisinau, Moldova
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.offline.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-6.jpg' data-toggle='tooltip' data-placement='top' title='Louis' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  h5 Louis Martinez
+                  p Vienna, Austria
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.offline.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-3.jpg' data-toggle='tooltip' data-placement='top' title='Ryan' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  h5 Ryan Foster
+                  p Oslo, Norway
+                .person-add
+                  i.material-icons person
+              a.filterMembers.all.offline.contact(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-4.jpg' data-toggle='tooltip' data-placement='top' title='Mildred' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  h5 Mildred Bennett
+                  p London, United Kingdom
+                .person-add
+                  i.material-icons person
+        // End of Contacts
+        // Start of Discussions
+        #discussions.tab-pane.fade.active.show
+          .search
+            form.form-inline.position-relative
+              input#conversations.searchBox.form-control(type='search' placeholder='Type to search...')
+              button.btn.btn-link.loop(type='button')
+                i.material-icons search
+            button.btn.create(data-toggle='modal' data-target='#startnewchat')
+              i.material-icons create
+          .list-group.sort
+            button.btn.filterDiscussionsBtn.active.show(data-toggle='list' data-filter='all') All
+            button.btn.filterDiscussionsBtn(data-toggle='list' data-filter='read') Read
+            button.btn.filterDiscussionsBtn(data-toggle='list' data-filter='unread') Unread
+          .discussions#chat-list
+            h1 Discussions
+        // End of Discussions
+        // Start of Notifications
+        #notifications.tab-pane.fade
+          .search
+            form.form-inline.position-relative
+              input#notice.form-control(type='search' placeholder='Filter notifications...')
+              button.btn.btn-link.loop(type='button')
+                i.material-icons.filter-list filter_list
+          .list-group.sort
+            button.btn.filterNotificationsBtn.active.show(data-toggle='list' data-filter='all') All
+            button.btn.filterNotificationsBtn(data-toggle='list' data-filter='latest') Latest
+            button.btn.filterNotificationsBtn(data-toggle='list' data-filter='oldest') Oldest
+          .notifications
+            h1 Notifications
+            #alerts.list-group(role='tablist')
+              a.filterNotifications.all.latest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-1.jpg' data-toggle='tooltip' data-placement='top' title='Janette' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  p Janette has accepted your friend request on Swipe.
+                  span Oct 17, 2018
+              a.filterNotifications.all.latest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-1.jpg' data-toggle='tooltip' data-placement='top' title='Michael' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  p Michael, you have a new friend suggestion today.
+                  span Jun 21, 2018
+              a.filterNotifications.all.latest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-2.jpg' data-toggle='tooltip' data-placement='top' title='Mariette' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  p Mariette have just sent you a new message.
+                  span Feb 15, 2018
+              a.filterNotifications.all.latest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-6.jpg' data-toggle='tooltip' data-placement='top' title='Louis' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  p Louis has a birthday today. Wish her all the best.
+                  span Mar 23, 2018
+              a.filterNotifications.all.latest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-3.jpg' data-toggle='tooltip' data-placement='top' title='Janette' alt='avatar')
+                .status
+                  i.material-icons.online fiber_manual_record
+                .data
+                  p Harmony has accepted your friend request on Swipe.
+                  span Jan 5, 2018
+              a.filterNotifications.all.oldest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-5.jpg' data-toggle='tooltip' data-placement='top' title='Janette' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  p Keith have just sent you a new message.
+                  span Dec 22, 2017
+              a.filterNotifications.all.oldest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-female-2.jpg' data-toggle='tooltip' data-placement='top' title='Janette' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  p Michael, you have a new friend suggestion today.
+                  span Nov 29, 2017
+              a.filterNotifications.all.oldest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-3.jpg' data-toggle='tooltip' data-placement='top' title='Janette' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  p Ryan have just sent you a new message.
+                  span Sep 31, 2017
+              a.filterNotifications.all.oldest.notification(href='#' data-toggle='list')
+                img.avatar-md(src='dist/img/avatars/avatar-male-4.jpg' data-toggle='tooltip' data-placement='top' title='Janette' alt='avatar')
+                .status
+                  i.material-icons.offline fiber_manual_record
+                .data
+                  p Mildred has a birthday today. Wish him all the best.
+                  span Jul 19, 2017
+        // End of Notifications
+        // Start of Settings
+        #settings.tab-pane.fade
+          .settings
+            .profile
+              img.avatar-xl(src='dist/img/avatars/avatar-male-1.jpg' alt='avatar')
+              h1
+                a(href='#') Michael Knudsen
+              span Helena, Montana
+              .stats
+                .item
+                  h2 122
+                  h3 Fellas
+                .item
+                  h2 305
+                  h3 Chats
+                .item
+                  h2 1538
+                  h3 Posts
+            #accordionSettings.categories
+              h1 Settings
+              // Start of My Account
+              .category
+                a#headingOne.title.collapsed(href='#' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                  i.material-icons.md-30.online person_outline
+                  .data
+                    h5 My Account
+                    p Update your profile details
+                  i.material-icons keyboard_arrow_right
+                #collapseOne.collapse(aria-labelledby='headingOne' data-parent='#accordionSettings')
+                  .content
+                    .upload
+                      .data
+                        img.avatar-xl(src='dist/img/avatars/avatar-male-1.jpg' alt='image')
+                        label
+                          input(type='file')
+                          span.btn.button Upload avatar
+                      p
+                        | For best results, use an image at least 256px by 256px in either .jpg or .png format!
+                    form
+                      .parent
+                        .field
+                          label(for='firstName')
+                            | First name
+                            span *
+                          input#firstName.form-control(type='text' placeholder='First name' value='Michael' required='')
+                        .field
+                          label(for='lastName')
+                            | Last name
+                            span *
+                          input#lastName.form-control(type='text' placeholder='Last name' value='Knudsen' required='')
+                      .field
+                        label(for='email')
+                          | Email
+                          span *
+                        input#email.form-control(type='email' placeholder='Enter your email address' value='michael@gmail.com' required='')
+                      .field
+                        label(for='password') Password
+                        input#password.form-control(type='password' placeholder='Enter a new password' value='password' required='')
+                      .field
+                        label(for='location') Location
+                        input#location.form-control(type='text' placeholder='Enter your location' value='Helena, Montana' required='')
+                      button.btn.btn-link.w-100 Delete Account
+                      button.btn.button.w-100(type='submit') Apply
+              // End of My Account
+              // Start of Chat History
+              .category
+                a#headingTwo.title.collapsed(href='#' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
+                  i.material-icons.md-30.online mail_outline
+                  .data
+                    h5 Chats
+                    p Check your chat history
+                  i.material-icons keyboard_arrow_right
+                #collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordionSettings')
+                  .content.layer
+                    .history
+                      p
+                        | When you clear your conversation history, the messages will be deleted from your own device.
+                      p
+                        | The messages won&apos;t be deleted or cleared on the devices of the people you chatted with.
+                      .custom-control.custom-checkbox
+                        input#same-address.custom-control-input(type='checkbox')
+                        label.custom-control-label(for='same-address') Hide will remove your chat history from the recent list.
+                      .custom-control.custom-checkbox
+                        input#save-info.custom-control-input(type='checkbox')
+                        label.custom-control-label(for='save-info') Delete will remove your chat history from the device.
+                      button.btn.button.w-100(type='submit') Clear blah-blah
+              // End of Chat History
+              // Start of Notifications Settings
+              .category
+                a#headingThree.title.collapsed(href='#' data-toggle='collapse' data-target='#collapseThree' aria-expanded='true' aria-controls='collapseThree')
+                  i.material-icons.md-30.online notifications_none
+                  .data
+                    h5 Notifications
+                    p Turn notifications on or off
+                  i.material-icons keyboard_arrow_right
+                #collapseThree.collapse(aria-labelledby='headingThree' data-parent='#accordionSettings')
+                  .content.no-layer
+                    .set
+                      .details
+                        h5 Desktop Notifications
+                        p You can set up Swipe to receive notifications when you have new messages.
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Unread Message Badge
+                        p
+                          | If enabled shows a red badge on the Swipe app icon when you have unread messages.
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Taskbar Flashing
+                        p Flashes the Swipe app on mobile in your taskbar when you have new notifications.
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Notification Sound
+                        p Set the app to alert you via notification sound when you have unread messages.
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Vibrate
+                        p Vibrate when receiving new messages (Ensure system vibration is also enabled).
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Turn On Lights
+                        p
+                          | When someone send you a text message you will receive alert via notification light.
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+              // End of Notifications Settings
+              // Start of Connections
+              .category
+                a#headingFour.title.collapsed(href='#' data-toggle='collapse' data-target='#collapseFour' aria-expanded='true' aria-controls='collapseFour')
+                  i.material-icons.md-30.online sync
+                  .data
+                    h5 Connections
+                    p Sync your social accounts
+                  i.material-icons keyboard_arrow_right
+                #collapseFour.collapse(aria-labelledby='headingFour' data-parent='#accordionSettings')
+                  .content
+                    .app
+                      img(src='dist/img/integrations/slack.svg' alt='app')
+                      .permissions
+                        h5 Skrill
+                        p Read, Write, Comment
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .app
+                      img(src='dist/img/integrations/dropbox.svg' alt='app')
+                      .permissions
+                        h5 Dropbox
+                        p Read, Write, Upload
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .app
+                      img(src='dist/img/integrations/drive.svg' alt='app')
+                      .permissions
+                        h5 Google Drive
+                        p No permissions set
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+                    .app
+                      img(src='dist/img/integrations/trello.svg' alt='app')
+                      .permissions
+                        h5 Trello
+                        p No permissions set
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+              // End of Connections
+              // Start of Appearance Settings
+              .category
+                a#headingFive.title.collapsed(href='#' data-toggle='collapse' data-target='#collapseFive' aria-expanded='true' aria-controls='collapseFive')
+                  i.material-icons.md-30.online colorize
+                  .data
+                    h5 Appearance
+                    p Customize the look of Swipe
+                  i.material-icons keyboard_arrow_right
+                #collapseFive.collapse(aria-labelledby='headingFive' data-parent='#accordionSettings')
+                  .content.no-layer
+                    .set
+                      .details
+                        h5 Turn Off Lights
+                        p
+                          | The dark mode is applied to core areas of the app that are normally displayed as light.
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round.mode
+              // End of Appearance Settings
+              // Start of Language
+              .category
+                a#headingSix.title.collapsed(href='#' data-toggle='collapse' data-target='#collapseSix' aria-expanded='true' aria-controls='collapseSix')
+                  i.material-icons.md-30.online language
+                  .data
+                    h5 Language
+                    p Select preferred language
+                  i.material-icons keyboard_arrow_right
+                #collapseSix.collapse(aria-labelledby='headingSix' data-parent='#accordionSettings')
+                  .content.layer
+                    .language
+                      label(for='country') Language
+                      select#country.custom-select(required='')
+                        option(value='') Select an language...
+                        option English, UK
+                        option English, US
+              // End of Language
+              // Start of Privacy & Safety
+              .category
+                a#headingSeven.title.collapsed(href='#' data-toggle='collapse' data-target='#collapseSeven' aria-expanded='true' aria-controls='collapseSeven')
+                  i.material-icons.md-30.online lock_outline
+                  .data
+                    h5 Privacy &amp; Safety
+                    p Control your privacy settings
+                  i.material-icons keyboard_arrow_right
+                #collapseSeven.collapse(aria-labelledby='headingSeven' data-parent='#accordionSettings')
+                  .content.no-layer
+                    .set
+                      .details
+                        h5 Keep Me Safe
+                        p
+                          | Automatically scan and delete direct messages you receive from everyone that contain explict content.
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 My Friends Are Nice
+                        p
+                          | If enabled scans direct messages from everyone unless they are listed as your friend.
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Everyone can add me
+                        p
+                          | If enabled anyone in or out your friends of friends list can send you a friend request.
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Friends of Friends
+                        p
+                          | Only your friends or your mutual friends will be able to send you a friend reuqest.
+                      label.switch
+                        input(type='checkbox' checked='')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Data to Improve
+                        p This settings allows us to use and process information for analytical purposes.
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+                    .set
+                      .details
+                        h5 Data to Customize
+                        p This settings allows us to use your information to customize Swipe for you.
+                      label.switch
+                        input(type='checkbox')
+                        span.slider.round
+              // End of Privacy & Safety
+              // Start of Logout
+              .category
+                a.title.collapsed(href='sign-in.html')
+                  i.material-icons.md-30.online power_settings_new
+                  .data
+                    h5 Power Off
+                    p Log out of your account
+                  i.material-icons keyboard_arrow_right
+              // End of Logout
+        // End of Settings

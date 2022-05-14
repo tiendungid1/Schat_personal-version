@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Sign In &ndash; Swipe
+  meta(name='description' content='#')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap core CSS
+  link(href='/dist/css/lib/bootstrap.min.css' type='text/css' rel='stylesheet')
+  // Swipe core CSS
+  link(href='/dist/css/swipe.min.css' type='text/css' rel='stylesheet')
+  // Favicon
+  link(href='/dist/img/favicon.png' type='image/png' rel='icon')
+main
+  .layout
+    // Start of Sign In
+    .main.order-md-1
+      .start
+        .container
+          .col-md-12
+            .content
+              h1 Sign in to Swipe
+              .third-party
+                button.btn.item.bg-blue
+                  i.material-icons pages
+                button.btn.item.bg-teal
+                  i.material-icons party_mode
+                button.btn.item.bg-purple
+                  i.material-icons whatshot
+              p or use your email account:
+              form#loginForm
+                .form-group
+                  input#inputEmail.form-control(type='email' name='email' placeholder='Email Address' required='')
+                  button.btn.icon
+                    i.material-icons mail_outline
+                .form-group
+                  input#inputPassword.form-control(type='password' name='password' placeholder='Password' required='')
+                  button.btn.icon
+                    i.material-icons lock_outline
+                button.btn.button(type='submit') Sign In
+                .callout
+                  span
+                    | Don&apos;t have account?
+                    a(href='sign-up.html') Create Account
+    // End of Sign In
+    // Start of Sidebar
+    .aside.order-md-2
+      .container
+        .col-md-12
+          .preference
+            h2 Hello, Friend!
+            p Enter your personal details and start your journey with Swipe today.
+            a.btn.button(href='sign-up.html') Sign Up
+    // End of Sidebar
+  // Layout
+//
+  Bootstrap core JavaScript
+  ==================================================
+// Placed at the end of the document so the pages load faster
+script(src='/dist/js/app/auth/middlewares/route.public.js')
+script(src='/dist/js/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script.
+  window.jQuery || document.write('<script src="/dist/js/vendor/jquery-slim.min.js"><\\/script>')
+script(src='/dist/js/vendor/popper.min.js')
+script(src='/dist/js/bootstrap.min.js')
+script(src='/dist/js/app/auth/login.js')

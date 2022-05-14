@@ -1,0 +1,21 @@
+#exampleModalCenter.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .requests
+      .title
+        h1 Add your friends
+        button.btn(type='button' data-dismiss='modal' aria-label='Close')
+          i.material-icons close
+      .content
+        form
+          .form-group
+            label(for='user') Username:
+            input#user.form-control(type='text' placeholder='Add recipient...' required='')
+            #contact.user
+              img.avatar-sm(src='dist/img/avatars/avatar-female-5.jpg' alt='avatar')
+              h5 Keith Morris
+              button.btn
+                i.material-icons close
+          .form-group
+            label(for='welcome') Message:
+            textarea#welcome.text-control(placeholder='Send your welcome message...') Hi Keith, I&apos;d like to add you as a contact.
+          button.btn.button.w-100(type='submit') Send Friend Request

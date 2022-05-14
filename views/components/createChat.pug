@@ -1,0 +1,24 @@
+#startnewchat.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .requests
+      .title
+        h1 Start new chat
+        button.btn(type='button' data-dismiss='modal' aria-label='Close')
+          i.material-icons close
+      .content
+        form
+          .form-group
+            label(for='participant') Recipient:
+            input#participant.form-control(type='text' placeholder='Add recipient...' required='')
+            #recipient.user
+              img.avatar-sm(src='dist/img/avatars/avatar-female-5.jpg' alt='avatar')
+              h5 Keith Morris
+              button.btn
+                i.material-icons close
+          .form-group
+            label(for='topic') Topic:
+            input#topic.form-control(type='text' placeholder="What's the topic?" required='')
+          .form-group
+            label(for='message') Message:
+            textarea#message.text-control(placeholder='Send your welcome message...') Hmm, are you friendly?
+          button.btn.button.w-100(type='submit') Start New Chat
