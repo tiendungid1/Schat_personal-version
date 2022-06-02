@@ -1,5 +1,5 @@
 import { sign } from 'jsonwebtoken';
-import { ConfigService } from 'package/config';
+// import { ConfigService } from 'package/config';
 import { LoggerFactory } from 'package/logger';
 
 class JwtServiceImpl {
@@ -8,8 +8,8 @@ class JwtServiceImpl {
     secret;
 
     constructor() {
-        this.expiresIn = ConfigService.getSingleton().get('EXPIRES_IN');
-        this.secret = ConfigService.getSingleton().get('JWT_SECRET');
+        this.expiresIn = '1d';
+        this.secret = 'abdafabd';
         LoggerFactory.globalLogger.info(`[${JwtServiceImpl.name}] is bundling`);
     }
 

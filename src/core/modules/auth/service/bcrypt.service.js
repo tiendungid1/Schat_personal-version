@@ -1,6 +1,6 @@
 // @ts-check
 import { compareSync, hashSync, genSaltSync } from 'bcrypt';
-import { ConfigService } from 'package/config';
+// import { ConfigService } from 'package/config';
 import { UnauthorizedException } from 'package/httpException';
 import { LoggerFactory } from 'package/logger';
 
@@ -10,10 +10,7 @@ class BcryptServiceImpl {
     saltRounds;
 
     constructor() {
-        this.saltRounds = Number.parseInt(
-            ConfigService.getSingleton().get('SALT_ROUNDS'),
-            10,
-        );
+        this.saltRounds = Number.parseInt('10', 10);
         LoggerFactory.globalLogger.info(
             `[${BcryptServiceImpl.name}] is bundling`,
         );

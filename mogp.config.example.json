@@ -1,5 +1,5 @@
 {
-    "connectionString": "Put your database connection string here and create file: mogp.config.json",
+    "connectionString": "mongodb://127.0.0.1:27017/schat",
     "pathMigration": "/src/core/database/migrations/**.js",
     "pathSeeding": "/src/core/database/seeds/**.js",
     "pathRollback": "/src/core/modules/**/**.model.js"
